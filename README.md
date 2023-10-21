@@ -14,7 +14,7 @@ Read through our [contributing guidelines](CONTRIBUTING.md) to learn about our s
 
 ### Code of Conduct
 
-Help us keep Angular open and inclusive. Please read and follow our [Code of Conduct][codeofconduct].
+Help us keep CTF challenges open and inclusive. Please read and follow our [Code of Conduct](CODE_OF_CONDUCT.md)
 
 ## Community
 
