@@ -10,7 +10,7 @@ This repository lists most of the challenges used in the CTF Night, as well as m
 
 ### Contributing Guidelines
 
-Read through our [contributing guidelines][contributing] to learn about our submission process, coding rules, and more.
+Read through our [contributing guidelines](CONTRIBUTING.md) to learn about our submission process, coding rules, and more.
 
 ### Code of Conduct
 
