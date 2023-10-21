@@ -1,4 +1,4 @@
-Please organize the challenges into the folders with their own folder structure. If there is no classification on the challenge you've created, please consider to put it into a Misc or create it's own group by sipmly creating the folder.
+Please organize the challenges into the folders with their own folder structure. If there is no classification on the challenge you've created, please consider to put it into a `Misc` or create it's own group by sipmly creating the folder.
 
 ## Challenge creation format
 
@@ -6,7 +6,7 @@ Every challenge's flag format should be same. If possible, define the difficulty
 
 ### TODO
 
-Feel free to add if i missed anything:
+Feel free to add if we missed anything:
 - [...]
 - [...]
 
