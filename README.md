@@ -1,6 +1,6 @@
-# CTF Night
+# CTF Night🚩
 
-This repository lists most of the challenges used in the CTF Night, as well as most of the infrastructure that can be used to run them.
+This repository lists most of the challenges used in the CTF Night, as well as most of the infrastructure that can be used to run them. To enhance our CTF events and practice sessions, anyone can submit challenges to add to our open-source CTF challenge pool. These challenges will be featured on the https://ctf.ccs-security.club website.
 
 - [Vol.1](https://github.com/computer-communication-security-club/ctf-night/tree/vol1)
 - [Vol.2](https://github.com/computer-communication-security-club/ctf-night/tree/vol2)
