@@ -41,4 +41,3 @@ jobs:
             ctf challenge install $CHAL_DIR
           done
         shell: bash
-        working-directory: challenges
