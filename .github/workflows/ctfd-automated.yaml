@@ -21,7 +21,13 @@ jobs:
       - name: Install and sync challenges
         run: |
           shopt -s globstar
-          echo -e "[config]\nurl = ${{ secrets.CTFD_URL }}\naccess_token = ${{ secrets.CTFD_TOKEN }}" > .ctfd/config
+          CONFIG="[config]\n
+                  url = ${{ secrets.CTFD_URL }}\n
+                  access_token = ${{ secrets.CTFD_TOKEN }}\n
+                  \n
+                  [challenges]\n"
+          echo -e $CONFIG > .ctfd/config
+          ls -la .ctfd/ && cat .ctfd/config
           cd $GITHUB_WORKSPACE/challenges
           for i in ./**/challenge.yml; do 
             CHAL_DIR=$(dirname $i)
