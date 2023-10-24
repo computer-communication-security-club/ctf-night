@@ -26,7 +26,7 @@ jobs:
                   access_token = ${{ secrets.CTFD_TOKEN }}\n
                   \n
                   [challenges]\n"
-          echo -e $CONFIG > .ctfd/config
+          echo -e $CONFIG > .ctf/config
           ls -la .ctf/ && cat .ctf/config
           cd $GITHUB_WORKSPACE/challenges
           for i in ./**/challenge.yml; do 
