@@ -29,7 +29,7 @@ jobs:
       - name: Install and sync challenges
         run: |
           shopt -s globstar
-          cd web/Insecure-deserialization/ && pwd
+          cd $GITHUB_WORKSPACE/challenges || true
           for i in ./**/challenge.yml; do 
             CHAL_DIR=$(dirname $i)
             echo "SYNCING CHALLENGE TO CTFd: $CHAL_DIR"
@@ -42,4 +42,4 @@ jobs:
             ctf challenge install $CHAL_DIR
           done
         shell: bash
-        working-directory: challenges/
+        working-directory: challenges
