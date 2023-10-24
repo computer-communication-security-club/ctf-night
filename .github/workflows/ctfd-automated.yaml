@@ -3,8 +3,8 @@ name: AUTOMATED - CTFd sync
 on:
   # Allows you to run this workflow automatically from the push event to `main` branch
   push:
-    paths-ignore:
-        - '.github/**'
+    paths:
+      - 'challenge/**'
     branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
