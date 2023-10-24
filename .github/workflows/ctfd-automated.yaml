@@ -38,6 +38,5 @@ jobs:
             if [ $? == 1 ]; then
               echo "::warning::Error syncing challenge $CHAL_DIR"
             fi
-            ctf challenge install $CHAL_DIR
           done
         shell: bash
