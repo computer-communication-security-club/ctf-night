@@ -8,8 +8,8 @@ value: 500
 type: dynamic
 extra:
   initial: 500
-  decay: 75
-  minimum: 50
+  decay: 10
+  minimum: 100
 flags:
   - ccsCTF{2f3918a762d1bfd97da53bbedca6ce9c585e7ebc}
 tags:
