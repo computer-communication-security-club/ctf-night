@@ -3,8 +3,8 @@ name: AUTOMATED - CTFd sync
 on:
   # Allows you to run this workflow automatically from the push event to `main` branch
   push:
-    paths:
-      - 'challenges/**'
+    # paths:
+    #   - 'challenges/**'
     branches: [ main ]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
@@ -18,17 +18,17 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install ctfcli
-      - name: Install and sync challenges
+      - name: Set up ctfcli config
         run: |
-          shopt -s globstar
           CONFIG="[config]\n
                   url = ${{ secrets.CTFD_URL }}\n
                   access_token = ${{ secrets.CTFD_TOKEN }}\n
                   \n
                   [challenges]\n"
           echo -e $CONFIG > .ctf/config
-          ls -la .ctf/ && cat .ctf/config
-          cd $GITHUB_WORKSPACE/challenges
+      - name: Install and sync challenges
+        run: |
+          shopt -s globstar
           for i in ./**/challenge.yml; do 
             CHAL_DIR=$(dirname $i)
             echo "SYNCING CHALLENGE TO CTFd: $CHAL_DIR"
@@ -41,3 +41,4 @@ jobs:
             ctf challenge install $CHAL_DIR
           done
         shell: bash
+        working-directory: challenges/
