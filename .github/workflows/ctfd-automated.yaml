@@ -29,10 +29,10 @@ jobs:
       - name: Install and sync challenges
         run: |
           shopt -s globstar
-          ls -la web/ && ls -la web/Insecure-deserialization/
+          cd web/Insecure-deserialization/ && pwd
           for i in ./**/challenge.yml; do 
             CHAL_DIR=$(dirname $i)
-            echo "SYNCING CHALLENGE TO CTFd: $CHAL_DIR" && ls -la $CHAL_DIR
+            echo "SYNCING CHALLENGE TO CTFd: $CHAL_DIR"
             # Try installing first, if already exists, sync will update it
             ctf challenge install $CHAL_DIR
             ctf challenge sync $CHAL_DIR
