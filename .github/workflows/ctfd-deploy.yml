@@ -1,0 +1,71 @@
+name: CTFd Challenge Deploy
+
+on:
+  push:
+    paths:
+      - 'challenges/**'
+    branches: [main]
+
+jobs:
+  challenge-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+
+      - name: Install ctfcli
+        run: |
+          python -m pip install --upgrade pip
+          pip install ctfcli
+
+      - name: Set up ctfcli config
+        run: |
+          CONFIG="[config]\n\
+                  url = ${{ secrets.CTFD_URL }}\n\
+                  access_token = ${{ secrets.CTFD_TOKEN }}\n\
+                  \n\
+                  [challenges]\n"
+          echo -e "$CONFIG" > .ctf/config
+
+      - name: Lint and deploy challenges
+        run: |
+          shopt -s globstar
+          for i in **/challenge.yml; do
+            CHAL_DIR=$(dirname "$i")
+            echo "PROCESSING CHALLENGE: $CHAL_DIR"
+            
+            # Lint the challenge file
+            echo "LINTING CHALLENGE FILE: $CHAL_DIR"
+            ctf challenge lint "$CHAL_DIR"
+            lint_exit_code=$?
+            
+            # If linting failed, show a warning
+            if [ $lint_exit_code == 1 ]; then
+              echo "::warning::Linting failed for challenge $CHAL_DIR"
+            fi
+            
+            # Check if the challenge is already installed
+            echo "CHECKING IF CHALLENGE IS INSTALLED: $CHAL_DIR"
+            ctf challenge lint "$CHAL_DIR" | grep -q "Success"
+            
+            # If not installed, install it
+            if [ $? != 0 ]; then
+              echo "INSTALLING CHALLENGE TO CTFd: $CHAL_DIR"
+              ctf challenge install "$CHAL_DIR"
+            else
+              echo "CHALLENGE ALREADY INSTALLED: $CHAL_DIR"
+            fi
+            
+            # Sync the challenge
+            echo "SYNCING CHALLENGE TO CTFd: $CHAL_DIR"
+            ctf challenge sync "$CHAL_DIR"
+            
+            # Show a warning if syncing failed
+            if [ $? == 1 ]; then
+              echo "::warning::Error syncing challenge $CHAL_DIR"
+            fi
+          done
+        shell: bash
