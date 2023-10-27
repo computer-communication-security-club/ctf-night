@@ -31,16 +31,16 @@ jobs:
                   \n\
                   [challenges]\n"
           echo -e "$CONFIG" > .ctf/config
-      - name: Determine new or changed challenges
-        id: determine-changed-challenges
-        run: |
-          CHANGES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^challenges/' | tr '\n' ',' | sed 's/,$//')
-          echo "CHANGES=$CHANGED_CHALLENGES">> $GITHUB_ENV
+      # - name: Determine new or changed challenges
+      #   id: determine-changed-challenges
+      #   run: |
+      #     CHANGES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^challenges/' | tr '\n' ',' | sed 's/,$//')
+      #     echo "CHANGES=$CHANGED_CHALLENGES">> $GITHUB_ENV
       - name: Lint and deploy challenges
         run: |
           shopt -s globstar
-          CHANGED_CHALLENGES="${{ env.CHANGED_CHALLENGES }}"
-          for i in $(echo $CHANGED_CHALLENGES | tr ',' '\n'); do
+          CHANGED_CHALLENGES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^challenges/')
+          for i in $CHANGED_CHALLENGES; do
             CHAL_DIR=$(dirname "$i")
             echo "PROCESSING CHALLENGE: $CHAL_DIR"
             
