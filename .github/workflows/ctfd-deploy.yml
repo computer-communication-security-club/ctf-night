@@ -1,6 +1,9 @@
 name: CTFd Challenge Deploy
 
 on:
+  pull_request:
+    paths:
+      - 'challenges/**'
   push:
     paths:
       - 'challenges/**'
@@ -12,15 +15,12 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-
       - name: Set up Python
         uses: actions/setup-python@v4
-
       - name: Install ctfcli
         run: |
           python -m pip install --upgrade pip
           pip install ctfcli
-
       - name: Set up ctfcli config
         run: |
           CONFIG="[config]\n\
@@ -29,11 +29,14 @@ jobs:
                   \n\
                   [challenges]\n"
           echo -e "$CONFIG" > .ctf/config
-
+      - name: Determine new or changed challenges
+        id: determine-changed-challenges
+        run: echo "::set-output name=CHANGED_CHALLENGES::$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^challenges/')"
       - name: Lint and deploy challenges
         run: |
           shopt -s globstar
-          for i in **/challenge.yml; do
+          CHANGED_CHALLENGES="${{ steps.determine-changed-challenges.outputs.CHANGED_CHALLENGES }}"
+          for i in $CHANGED_CHALLENGES; do
             CHAL_DIR=$(dirname "$i")
             echo "PROCESSING CHALLENGE: $CHAL_DIR"
             
