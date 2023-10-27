@@ -2,5 +2,5 @@ name: "TEST"
 author: "m0nrass"
 category: pwn
 description: This is a sample description
-value: 200
+value: 100
 type: standard
