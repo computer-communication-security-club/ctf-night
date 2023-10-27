@@ -31,7 +31,7 @@ jobs:
           echo -e "$CONFIG" > .ctf/config
       - name: Determine new or changed challenges
         id: determine-changed-challenges
-        run: echo "CHANGED_CHALLENGES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^challenges/')" >> $GITHUB_OUTPUT
+        run: echo "CHANGED_CHALLENGES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^challenges/')" >> "$GITHUB_OUTPUT"
       - name: Lint and deploy challenges
         run: |
           shopt -s globstar
