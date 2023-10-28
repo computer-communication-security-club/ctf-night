@@ -1,0 +1,7 @@
+[config]
+url = https://ctf.ccs-security.club/
+access_token = ctfd_2d832a2fce70e2a572febe389bac4471210e6f030d524b4e159331507867ba22
+
+[challenges]
+challenges/reverse/test = challenges/reverse/test
+
