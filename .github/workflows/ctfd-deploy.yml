@@ -56,22 +56,12 @@ jobs:
         shell: bash
       - name: Push ctfcli config file
         run: |
-          cat .ctf/config; echo "AAAABEEEE"
-          if cat .ctf/config | grep -q 'challenge.yml'; then
-            cat .ctf/config; echo "TESTEST"
-            sed -n '/challenge.yml/p' .ctf/config >> .ctf/challenges
-            sed -n '/challenge.yml/p' .ctf/config && cat .ctf/challenges
-            awk '/challenge.yml/' .ctf/config >> .ctf/challenges
-            awk '/challenge.yml/' .ctf/config && cat .ctf/challenges
-            cat .ctf/config; echo "TESTEST"
-            grep -F 'challenge.yml' .ctf/config >> .ctf/challenges
-            grep -F 'challenge.yml' .ctf/config && cat .ctf/challenges; echo "TESTEST"
-            git config user.name github-actions
-            git config user.email github-actions@github.com
-            git add .ctf/challenges
-            git commit -m "chore(config): update challenges"
-            git push
-          else
-            echo "No challenges added to config file"
-          fi
+          cat .ctf/config; echo "TESTEST"
+          sed -n '/challenge.yml/p' .ctf/config >> .ctf/challenges
+          sed -n '/challenge.yml/p' .ctf/config && cat .ctf/challenges
+          git config user.name github-actions
+          git config user.email github-actions@github.com
+          git add .ctf/challenges
+          git commit -m "chore(config): update challenges"
+          git push
         shell: bash
