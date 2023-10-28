@@ -55,7 +55,7 @@ jobs:
       - name: Push ctfcli config file
         run: |
           if [ -f ".ctf/config" ]; then
-            sed -n '/challenge.yml/p' .ctf/config >> .ctf/challenges
+            awk '/challenge.yml/' .ctf/config >> .ctf/challenges
             ls -la .ctf/ && cat .ctf/*
             git config user.name github-actions
             git config user.email github-actions@github.com
