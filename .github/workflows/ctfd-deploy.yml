@@ -54,15 +54,15 @@ jobs:
         shell: bash
       - name: Push ctfcli config file
         run: |
-          if [ -f ".ctf/config" ]; then
-            cat .ctf/config
+          if [ -f cat .ctf/config | grep -q 'challenge.yml' ]; then
+            cat .ctf/config; echo "TESTEST"
             sed -n '/challenge.yml/p' .ctf/config >> .ctf/challenges
             sed -n '/challenge.yml/p' .ctf/config && cat .ctf/challenges
             awk '/challenge.yml/' .ctf/config >> .ctf/challenges
             awk '/challenge.yml/' .ctf/config && cat .ctf/challenges
-            cat .ctf/config
+            cat .ctf/config; echo "TESTEST"
             grep -F 'challenge.yml' .ctf/config >> .ctf/challenges
-            grep -F 'challenge.yml' .ctf/config && cat .ctf/challenges
+            grep -F 'challenge.yml' .ctf/config && cat .ctf/challenges; echo "TESTEST"
             git config user.name github-actions
             git config user.email github-actions@github.com
             git add .ctf/challenges
