@@ -42,8 +42,10 @@ jobs:
             echo "CHECKING IF CHALLENGE IS INSTALLED: $CHAL_DIR"
             if ! cat .ctf/config | grep -q "$CHAL_DIR"; then
               echo "INSTALLING CHALLENGE TO CTFd: $CHAL_DIR"
+              ctf challenge add "$CHAL_DIR"
               ctf challenge install "$CHAL_DIR"
               ctf challenge add "$CHAL_DIR"
+              cat .ctf/config; echo "FEFEFEFE_CONFIG_FILE"
               continue
             else
               echo "CHALLENGE ALREADY INSTALLED: $CHAL_DIR"
