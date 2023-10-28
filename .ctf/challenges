@@ -1,3 +1,9 @@
 [challenges]
 challenges/pwn/test/challenge.yml = challenges/pwn/test/challenge.yml
 challenges/reverse/test/challenge.yml = challenges/reverse/test/challenge.yml
+challenges/pwn/test-chal/challenge.yml = challenges/pwn/test-chal/challenge.yml
+challenges/reverse/test-chal/challenge.yml = challenges/reverse/test-chal/challenge.yml
+challenges/pwn/test/challenge.yml = challenges/pwn/test/challenge.yml
+challenges/reverse/test/challenge.yml = challenges/reverse/test/challenge.yml
+challenges/pwn/test-chal/challenge.yml = challenges/pwn/test-chal/challenge.yml
+challenges/reverse/test-chal/challenge.yml = challenges/reverse/test-chal/challenge.yml
