@@ -1,6 +1,6 @@
 name: "TEST"
 author: "m0nrass"
 category: pwn
-description: This is a sample description
+description: This is a sample description!!
 value: 200
 type: standard
