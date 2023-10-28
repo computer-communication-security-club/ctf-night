@@ -68,6 +68,7 @@ jobs:
               git add .ctf/challenges
               git commit -m "chore(config): update challenges"
               git push
+            else
+             echo "No challenges added to config file"
             fi
           fi
-          echo "No challenges added to config file"
