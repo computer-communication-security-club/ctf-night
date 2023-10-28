@@ -27,8 +27,7 @@ jobs:
         run: |
           CONFIG="[config]\n\
                   url = ${{ secrets.CTFD_URL }}\n\
-                  access_token = ${{ secrets.CTFD_TOKEN }}\n\
-                  \n\"
+                  access_token = ${{ secrets.CTFD_TOKEN }}\n\"
           echo -e "$CONFIG" > .ctf/config
           cat .ctf/challenges > .ctf/config
       - name: Lint and deploy challenges
