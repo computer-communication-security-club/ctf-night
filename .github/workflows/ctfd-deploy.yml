@@ -56,6 +56,7 @@ jobs:
         shell: bash
       - name: Push ctfcli config file
         run: |
+          cat .ctf/config; echo "AAAABEEEE"
           if cat .ctf/config | grep -q 'challenge.yml'; then
             cat .ctf/config; echo "TESTEST"
             sed -n '/challenge.yml/p' .ctf/config >> .ctf/challenges
