@@ -1,6 +1,6 @@
-name: "TEST1"
+name: "TEST"
 author: "m0nrass"
 category: reverse
-description: This is a sample description!!!
-value: 100
+description: This is a sample description
+value: 200
 type: standard
