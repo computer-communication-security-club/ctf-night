@@ -30,7 +30,7 @@ jobs:
                   access_token = ${{ secrets.CTFD_TOKEN }}\n\
                   \n"
           echo -e "$CONFIG" > .ctf/config
-          cat .ctf/challenges > .ctf/config
+          cat .ctf/challenges >> .ctf/config
       - name: Lint and deploy challenges
         run: |
           shopt -s globstar
