@@ -61,6 +61,6 @@ jobs:
           fi
           git config user.name github-actions
           git config user.email github-actions@github.com
-          git add .ctf/config
+          git add .ctf/challenges
           git commit -m "chore(config): update challenges"
           git push
