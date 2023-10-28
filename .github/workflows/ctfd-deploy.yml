@@ -53,10 +53,15 @@ jobs:
         shell: bash
       - name: Push ctfcli config file
         run: |
-          cat .ctf/config; echo "Config file"
           if cat .ctf/config | grep -q 'challenge.yml'; then
             NEW_CHALLENGES=$(sed -n '/challenge.yml/p' .ctf/config)
-            if ! cat .ctf/challenges | grep "$NEW_CHALLENGES"; then
+            while IFS= read -r LINE; do
+              if ! grep -q "$LINE" .ctf/challenges; then
+                echo -e "$LINE" >> .ctf/challenges
+                echo "ADDED NEW CHALLENGE TO .ctf/challenge: $LINE"
+              fi
+            done <<< "$NEW_CHALLENGES"
+            if [ -s .ctf/challenges ]; then
               echo -e "$NEW_CHALLENGES" >> .ctf/challenges
               git config user.name github-actions
               git config user.email github-actions@github.com
@@ -64,6 +69,5 @@ jobs:
               git commit -m "chore(config): update challenges"
               git push
             fi
-          else
-            echo "No challenges added to config file"
           fi
+          echo "No challenges added to config file"
