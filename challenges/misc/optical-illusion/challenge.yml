@@ -5,8 +5,14 @@ description: |-
   Keep your eyes open until Halloween is over!
   
   **Author**: m0nrass
+tags:
+  - beginner
 value: 500
-type: standard
+type: dynamic
+extra:
+  initial: 500
+  decay: 10
+  minimum: 100
 flags:
   - ccsCTF{M4g1C_eY3}
 files:
