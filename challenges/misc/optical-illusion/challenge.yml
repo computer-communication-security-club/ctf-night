@@ -1,7 +1,10 @@
 name: "Optical Illusion"
 author: "khangal"
-category: misc
-description: Keep your eyes open until Halloween is over!
+category: Misc
+description: |-
+  Keep your eyes open until Halloween is over!
+  
+  **Author**: m0nrass
 value: 500
 type: standard
 flags:
