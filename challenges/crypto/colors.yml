@@ -1,0 +1,13 @@
+name: "HLLWN CLR"
+author: "chngs"
+category: Crypto
+description: |-
+  Colorful colors, isn't it?
+
+  **Author**: c!0
+value: 500
+type: standard
+flags:
+  - ccsCTF{h4110w_c010r5_by_c!00}
+files:
+  - colors/hallbow.png
