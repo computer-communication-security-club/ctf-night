@@ -34,7 +34,7 @@ jobs:
       - name: Lint and deploy challenges
         run: |
           shopt -s globstar
-          CHANGED_CHALLENGES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^challenges/.*/challenge.yml')
+          CHANGED_CHALLENGES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^challenges/')
           for i in $CHANGED_CHALLENGES; do
             CHAL_DIR=$(dirname $i)
             echo "LINTING CHALLENGE FILE: $CHAL_DIR"
@@ -63,7 +63,6 @@ jobs:
               fi
             done <<< "$NEW_CHALLENGES"
             if [ -s .ctf/challenges ]; then
-              echo -e "$NEW_CHALLENGES" >> .ctf/challenges
               git config user.name github-actions
               git config user.email github-actions@github.com
               git add .ctf/challenges
