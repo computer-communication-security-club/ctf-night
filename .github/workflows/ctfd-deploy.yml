@@ -34,7 +34,7 @@ jobs:
       - name: Lint and deploy challenges
         run: |
           shopt -s globstar
-          CHANGED_CHALLENGES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^challenges/**/challenge.yml')
+          CHANGED_CHALLENGES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^challenges/.*/challenge.yml')
           for i in $CHANGED_CHALLENGES; do
             CHAL_DIR=$(dirname $i)
             echo "LINTING CHALLENGE FILE: $CHAL_DIR"
