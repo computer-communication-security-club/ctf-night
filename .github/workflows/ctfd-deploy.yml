@@ -65,6 +65,7 @@ jobs:
             if [ -s .ctf/challenges ]; then
               git config user.name github-actions
               git config user.email github-actions@github.com
+              git checkout ${GITHUB_REF_NAME}
               git add .ctf/challenges
               git commit -m "chore(config): update challenges"
               git push
