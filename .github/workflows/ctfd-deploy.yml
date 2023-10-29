@@ -62,7 +62,7 @@ jobs:
                 echo "ADDED NEW CHALLENGE TO .ctf/challenge: $LINE"
               fi
             done <<< "$NEW_CHALLENGES"
-            if [ -s .ctf/challenges ]; then
+            if [ -z "$(git diff .ctf/challenges)" ]; then
               git config user.name github-actions
               git config user.email github-actions@github.com
               git checkout ${GITHUB_REF_NAME}
