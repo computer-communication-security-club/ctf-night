@@ -36,7 +36,7 @@ jobs:
           shopt -s globstar
           CHANGED_CHALLENGES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^challenges/')
           for i in $CHANGED_CHALLENGES; do
-            CHAL_DIR=$(dirname $i)
+            CHAL_DIR=$(dirname $i | awk -F'/' '{print $1 "/" $2 "/" $3}')
             echo "LINTING CHALLENGE FILE: $CHAL_DIR"
             ctf challenge lint "$CHAL_DIR"
             echo "CHECKING IF CHALLENGE IS INSTALLED: $CHAL_DIR"
