@@ -1,0 +1,17 @@
+name: "Count"
+author: "chngs"
+category: Programming
+description: |-
+  13 ih uchirtai too shvvvv
+
+  **Author**: c!0
+value: 2000
+type: dynamic
+extra:
+  initial: 2000
+  decay: 100
+  minimum: 1000
+flags:
+  - ccsCTF{d0in_m4th3m4tic_i5_fun_by_c!0}
+files:
+  - challenge/count.txt
