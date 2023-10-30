@@ -1,0 +1,17 @@
+name: "Weird encrypting"
+author: "TheEyeLid"
+category: Cryptography
+description: |-
+  VSC might help you
+  **Author**: TheEyeLid
+value : 700
+type: dynamic
+extra:
+  initial: 700
+  decay: 10
+  minimium: 200
+flags:
+  - ccsCTF{kind@_w3irD_enc0d1nG}
+tags:
+  - beginner
+ 
