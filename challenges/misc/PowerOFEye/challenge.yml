@@ -1,0 +1,13 @@
+name: "PowerOFEye"
+author: "chngs"
+category: Misc
+description: |-
+  No Description Needed
+
+  **Author**: c!0
+value: 750
+type: standard
+flags:
+  - ccsCTF{*ju5t_4n0th3r_5tr1ng5_pr0b13m_by_c!0}
+files:
+  - challenge/misc.txt

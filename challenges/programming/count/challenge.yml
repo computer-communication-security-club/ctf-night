@@ -1,0 +1,13 @@
+name: "Count"
+author: "chngs"
+category: Programming
+description: |-
+  13 ih uchirtai too shvv
+
+  **Author**: c!0
+value: 1500
+type: standard
+flags:
+  - ccsCTF{d0in_m4th3m4tic_i5_fun_by_c!0}
+files:
+  - challenge/count.txt

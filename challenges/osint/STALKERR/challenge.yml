@@ -1,0 +1,11 @@
+name: "STALKERR"
+author: "chngs"
+category: Osint
+description: |-
+  Find a flag from somewhere???
+
+  **Author**: c!0
+value: 500
+type: standard
+flags:
+  - ccsCTF{naah_i_think_it's_hard_by_c!0}
