@@ -18,3 +18,4 @@ challenges/forensics/stego/challenge.yml = challenges/forensics/stego/challenge.
 challenges/misc/PixelArt/challenge.yml = challenges/misc/PixelArt/challenge.yml
 challenges/forensics/spooky-docs/challenge.yml = challenges/forensics/spooky-docs/challenge.yml
 challenges/crypto/color/challenge.yml = challenges/crypto/color/challenge.yml
+challenges/programming/count/challenge.yml = challenges/programming/count/challenge.yml
