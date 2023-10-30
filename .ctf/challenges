@@ -10,3 +10,4 @@ challenges/crypto/color/challenge.yml = challenges/crypto/color/challenge.yml
 challenges/misc/PowerOFEye/challenge.yml = challenges/misc/PowerOFEye/challenge.yml
 challenges/osint/STALKERR/challenge.yml = challenges/osint/STALKERR/challenge.yml
 challenges/programming/count/challenge.yml = challenges/programming/count/challenge.yml
+challenges/web/jwt/challenge.yml = challenges/web/jwt/challenge.yml
