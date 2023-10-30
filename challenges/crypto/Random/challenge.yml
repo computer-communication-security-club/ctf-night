@@ -2,7 +2,7 @@ name: "isThisRANDOM"
 author: "dudu"
 category: Cryptography
 description: |-
-Is Python random module truly random?? 
+  Is Python random module truly random?? 
   
   **Author**: Uzi
 tags:
