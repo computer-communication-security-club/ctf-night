@@ -1,0 +1,20 @@
+name: "source code review"
+author: "BaD$AngeL"
+category: web
+description: |-
+  source code review, where is flag
+  **Author**: BaD$AngeL
+value: 2000
+type: dynamic
+extra:
+  initial: 2000
+  decay: 30
+  minimum: 500
+flags:
+  - ccsCTF{65745bb3c57c195ed2ed7f13012b4d31}
+files:
+  - src/challenge.zip
+connection_info: http://3.69.2.172:10000/
+tags:
+    - web
+version: "0.1"
