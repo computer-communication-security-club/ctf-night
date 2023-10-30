@@ -14,3 +14,5 @@ flags:
  - ccsCTF{R1v3st_Sh4m1r_@dl3m4n_R_pR0ud_of_u}
 tags:
  - intermediate
+files:
+  - challenge/chall.py
