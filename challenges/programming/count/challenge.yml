@@ -5,11 +5,11 @@ description: |-
   13 ih uchirtai too shvv
 
   **Author**: c!0
-value: 1500
+value: 2000
 type: dynamic
 extra:
-  initial: 1500
-  decay: 50
+  initial: 2000
+  decay: 100
   minimum: 1000
 flags:
   - ccsCTF{d0in_m4th3m4tic_i5_fun_by_c!0}
