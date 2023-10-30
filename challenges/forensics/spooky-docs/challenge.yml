@@ -15,3 +15,5 @@ extra:
   minimum: 500
 flags:
   - ccsCTF{Ez_F0r3nnS1c5_huH?}
+files:
+  - challenge/forensics.zip
