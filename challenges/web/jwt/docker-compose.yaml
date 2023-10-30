@@ -1,0 +1,27 @@
+version: '3'
+services:
+  # Node.js Application
+  app:
+    build: .
+    container_name: node-app
+    ports:
+      - "5000:5000" 
+    environment:
+      - MONGO_DB_URI=mongodb://mongodb:27017
+    depends_on:
+      - mongodb
+    networks:
+      - net
+
+  # MongoDB Database
+  mongodb:
+    image: mongo:latest
+    container_name: mongo-db
+    ports:
+      - "27017:27017"  # Expose MongoDB on port 27017
+    networks:
+      - net
+
+networks:
+  net:
+    driver: bridge

@@ -1,1 +1,1 @@
-ccsCTF{2f3918a762d1bfd97da53bbedca6ce9c585e7ebc}
+ccsCTF{fake_flag}

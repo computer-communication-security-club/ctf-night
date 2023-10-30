@@ -1,8 +1,8 @@
-name: "Insecure-deserialization"
+name: "Auth-bypass"
 author: "BaD$AngeL"
 category: web
 description: |-
-  bypass authentication or otherwise abuse the logic behind an application
+  if u can register, bypass auth, get flag
   **Author**: BaD$AngeL
 value: 1000
 type: dynamic
@@ -11,7 +11,7 @@ extra:
   decay: 30
   minimum: 250
 flags:
-  - ccsCTF{5ef629ef0595df56de96545138a6fe9c}
+  - ccsCTF{d266fb75bd1923842d332c4f6c2e4035}
 tags:
     - web
 version: "0.1"
