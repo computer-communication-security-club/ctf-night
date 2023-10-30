@@ -12,6 +12,9 @@ extra:
   minimum: 250
 flags:
   - ccsCTF{d266fb75bd1923842d332c4f6c2e4035}
+files:
+  - src/challenge.zip
+connection_info: http://3.69.2.172:5000/
 tags:
     - web
 version: "0.1"
