@@ -13,3 +13,4 @@ challenges/programming/count/challenge.yml = challenges/programming/count/challe
 challenges/web/jwt/challenge.yml = challenges/web/jwt/challenge.yml
 challenges/crypto/rsa/challenge.yml = challenges/crypto/rsa/challenge.yml
 challenges/crypto/weird-encryption/challenge.yml = challenges/crypto/weird-encryption/challenge.yml
+challenges/crypto/HelloAlice/challenge.yml = challenges/crypto/HelloAlice/challenge.yml
