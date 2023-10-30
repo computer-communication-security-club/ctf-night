@@ -3,7 +3,7 @@ author: "dudu"
 category: Cryptography
 description: |-
   You know the formula right?
-ccsCTF{shared_secret_key}
+  *Flag: ccsCTF{shared_secret_key}*
   
   **Author**: Uzi
 tags:
