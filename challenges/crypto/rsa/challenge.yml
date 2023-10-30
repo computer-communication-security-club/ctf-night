@@ -11,8 +11,8 @@ extra:
  decay: 12 
  minimium: 500
 flags:
- - ccsCTF{R1v3st_Sh4m1r_@dl3m4n_R_pR0ud_of_u}
+  - ccsCTF{R1v3st_Sh4m1r_@dl3m4n_R_pR0ud_of_u}
 tags:
- - intermediate
+  - intermediate
 files:
   - challenge/chall.py
