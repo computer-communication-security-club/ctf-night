@@ -1,0 +1,19 @@
+name: "isThisRANDOM"
+author: "dudu"
+category: Cryptography
+description: |-
+Is Python random module truly random?? 
+  
+  **Author**: Uzi
+tags:
+  - intermediate
+value: 1000
+type: dynamic
+extra:
+  initial: 1000
+  decay: 10
+  minimum: 500
+flags:
+  - ccsCTF{r4ndom_4in7_7h47_r4ndom_15_17}
+files:
+  - challenge/cryptochall.py
