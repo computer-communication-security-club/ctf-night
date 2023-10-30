@@ -6,6 +6,7 @@ description: |-
   **Author**: BaD$AngeL
 value: 1000
 type: dynamic
+image: null
 extra:
   initial: 1000
   decay: 30
