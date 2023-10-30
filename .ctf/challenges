@@ -18,3 +18,4 @@ challenges/crypto/Urt-too/challenge.yml = challenges/crypto/Urt-too/challenge.ym
 challenges/osint/AroundTheWorld/challenge.yml = challenges/osint/AroundTheWorld/challenge.yml
 challenges/forensics/stego/challenge.yml = challenges/forensics/stego/challenge.yml
 challenges/misc/PixelArt/challenge.yml = challenges/misc/PixelArt/challenge.yml
+challenges/forensics/spooky-docs/challenge.yml = challenges/forensics/spooky-docs/challenge.yml
