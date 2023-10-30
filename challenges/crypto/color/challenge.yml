@@ -6,7 +6,11 @@ description: |-
 
   **Author**: c!0
 value: 1000
-type: standard
+type: dynamic
+extra:
+  initial: 1000
+  decay: 50
+  minimum: 500
 flags:
   - ccsCTF{h4110w_c010r5_by_c!00}
 files:

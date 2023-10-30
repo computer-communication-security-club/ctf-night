@@ -6,7 +6,11 @@ description: |-
 
   **Author**: c!0
 value: 750
-type: standard
+type: dynamic
+extra:
+  initial: 750
+  decay: 10
+  minimum: 500
 flags:
   - ccsCTF{*ju5t_4n0th3r_5tr1ng5_pr0b13m_by_c!0}
 files:
