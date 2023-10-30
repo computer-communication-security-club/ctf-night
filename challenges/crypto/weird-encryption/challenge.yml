@@ -14,4 +14,5 @@ flags:
   - ccsCTF{kind@_w3irD_enc0d1nG}
 tags:
   - beginner
- 
+ files:
+  - challenge/chall.txt
