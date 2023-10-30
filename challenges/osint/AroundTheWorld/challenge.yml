@@ -14,3 +14,5 @@ extra:
   minimum: 500
 flags:
   - ccsCTF{MAA_IM_IN_ANTARTICA}
+files:
+  - challenge/chall4.txt
