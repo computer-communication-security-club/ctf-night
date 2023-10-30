@@ -12,3 +12,4 @@ challenges/osint/STALKERR/challenge.yml = challenges/osint/STALKERR/challenge.ym
 challenges/programming/count/challenge.yml = challenges/programming/count/challenge.yml
 challenges/web/jwt/challenge.yml = challenges/web/jwt/challenge.yml
 challenges/crypto/rsa/challenge.yml = challenges/crypto/rsa/challenge.yml
+challenges/crypto/weird-encryption/challenge.yml = challenges/crypto/weird-encryption/challenge.yml
