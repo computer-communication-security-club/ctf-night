@@ -1,6 +1,6 @@
 name: "Auth-bypass"
 author: "BaD$AngeL"
-category: web
+category: Web
 description: |-
   if u can register, bypass auth, get flag
   **Author**: BaD$AngeL
@@ -16,5 +16,5 @@ files:
   - src/challenge.zip
 connection_info: http://3.69.2.172:5000/
 tags:
-    - web
+    - intermediate
 version: "0.1"
