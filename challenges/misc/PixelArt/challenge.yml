@@ -2,7 +2,7 @@ name: "PixelArt"
 author: "dudu"
 category: Misc
 description: |-
-  Remove all the numbers and The flag ends after first } . btw not a forensic challenge :p
+  Remove all the numbers and The flag ends after first } ,not forensic chall . 
   
   **Author**: Uzi
 tags:
@@ -16,4 +16,4 @@ extra:
 flags:
   - ccsCTF{ART!ST}
 files:
-  - challenge/wpixelart.jpg
+  - challenge/wpixelart.png
