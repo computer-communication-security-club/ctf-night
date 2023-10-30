@@ -5,3 +5,4 @@ challenges/misc/hidden-web/challenge.yml = challenges/misc/hidden-web/challenge.
 challenges/crypto/Random/challenge.yml = challenges/crypto/Random/challenge.yml
 challenges/web/Insecure-deserialization/challenge.yml = challenges/web/Insecure-deserialization/challenge.yml
 challenges/osint/Go-Go/challenge.yml = challenges/osint/Go-Go/challenge.yml
+challenges/crypto/Cybercook/challenge.yml = challenges/crypto/Cybercook/challenge.yml
