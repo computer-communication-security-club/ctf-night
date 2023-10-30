@@ -8,6 +8,15 @@ This repository lists most of the challenges used in the CTF Night, as well as m
 
 ## Contributing
 
+### Challenge Creator's Checklist
+
+Before submitting a pull request (PR), please make sure to:
+
+- [ ] Your challenge includes a `challenge.yml` file. If not, refer to the [challenge specification](https://github.com/CTFd/ctfcli/blob/master/ctfcli/spec/challenge-example.yml) for guidance using the **ctfcli** tool.
+- [ ] Each challenge must have a unique name. Existing challenge names can be found in the [.ctf/challenges](.ctf/challenges) config file.
+- [ ] Follow the repository structure. Create a directory for your challenge to store necessary source files. Do not modify or delete `.ctf/`, `.github/workflow/`, and `infra/` directories.
+- [ ] Your challenges must have a healthcheck script if it is deployable. For automatically deployment, Dockerization is **required**.
+
 ### Contributing Guidelines
 
 Read through our [contributing guidelines](CONTRIBUTING.md) to learn about our submission process, coding rules, and more.
