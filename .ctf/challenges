@@ -6,3 +6,7 @@ challenges/crypto/Random/challenge.yml = challenges/crypto/Random/challenge.yml
 challenges/web/Insecure-deserialization/challenge.yml = challenges/web/Insecure-deserialization/challenge.yml
 challenges/osint/Go-Go/challenge.yml = challenges/osint/Go-Go/challenge.yml
 challenges/crypto/Cybercook/challenge.yml = challenges/crypto/Cybercook/challenge.yml
+challenges/crypto/color/challenge.yml = challenges/crypto/color/challenge.yml
+challenges/misc/PowerOFEye/challenge.yml = challenges/misc/PowerOFEye/challenge.yml
+challenges/osint/STALKERR/challenge.yml = challenges/osint/STALKERR/challenge.yml
+challenges/programming/count/challenge.yml = challenges/programming/count/challenge.yml
