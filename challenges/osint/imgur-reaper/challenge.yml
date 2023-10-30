@@ -1,0 +1,17 @@
+name: "Imgur Reaper"
+author: "khangal"
+category: OSINT
+description: |-
+  Here is the REAPED link, *G9unl09s*
+  
+  **Author**: m0nrass
+tags:
+  - beginner
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 10
+  minimum: 100
+flags:
+  - ccsCTF{sP1d3Rr_We5_se4RcH3r}

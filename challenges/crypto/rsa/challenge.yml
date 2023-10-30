@@ -1,0 +1,18 @@
+name: "RSA"
+author: "TheEyeLid"
+category: Cryptography
+description : |-
+  Just a simple RSA 
+  **Author**: TheEyeLid
+value: 1000
+type: dynamic
+extra: 
+ initial : 1000
+ decay: 12 
+ minimium: 500
+flags:
+  - ccsCTF{R1v3st_Sh4m1r_@dl3m4n_R_pR0ud_of_u}
+tags:
+  - intermediate
+files:
+  - challenge/chall.py

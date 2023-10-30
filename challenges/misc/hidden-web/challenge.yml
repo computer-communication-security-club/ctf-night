@@ -1,0 +1,19 @@
+name: "Hidden WEB"
+author: "khangal"
+category: Infrastructure
+description: |-
+  Can you find the hidden website and tell me info about its SSL certificate?
+  
+  *Flag: ccsCTF{CERT_PUBLIC_KEY}*
+
+  **Author**: m0nrass
+tags:
+  - intermediate
+value: 1000
+type: dynamic
+extra:
+  initial: 1000
+  decay: 10
+  minimum: 500
+flags:
+  - ccsCTF{7fdc31c373886c6944af53288e9cc6d48d2a3511f8d03c0741ed469b1e139299}
