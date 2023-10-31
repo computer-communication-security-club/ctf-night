@@ -7,7 +7,6 @@ on:
   push:
     paths:
       - 'challenges/**'
-    branches: [main]
 
 jobs:
   challenge-deploy:
@@ -35,14 +34,15 @@ jobs:
         run: |
           shopt -s globstar
           CHANGED_CHALLENGES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^challenges/')
-          for CHAL_DIR in $CHANGED_CHALLENGES; do
+          for i in $CHANGED_CHALLENGES; do
+            CHAL_DIR=$(dirname $i | awk -F'/' '{print $1 "/" $2 "/" $3}')
             echo "LINTING CHALLENGE FILE: $CHAL_DIR"
             ctf challenge lint "$CHAL_DIR"
             echo "CHECKING IF CHALLENGE IS INSTALLED: $CHAL_DIR"
             if ! cat .ctf/config | grep -q "$CHAL_DIR"; then
               echo "INSTALLING CHALLENGE TO CTFd: $CHAL_DIR"
               ctf challenge install "$CHAL_DIR"
-              ctf challenge add "$CHAL_DIR"
+              ctf challenge add "$CHAL_DIR/challenge.yml"
               continue
             else
               echo "CHALLENGE ALREADY INSTALLED: $CHAL_DIR"
@@ -61,12 +61,13 @@ jobs:
                 echo "ADDED NEW CHALLENGE TO .ctf/challenge: $LINE"
               fi
             done <<< "$NEW_CHALLENGES"
-            if [ -s .ctf/challenges ]; then
-              echo -e "$NEW_CHALLENGES" >> .ctf/challenges
+            if [ ! -z "$(git diff .ctf/challenges)" ]; then
               git config user.name github-actions
               git config user.email github-actions@github.com
+              git checkout ${GITHUB_REF_NAME}
               git add .ctf/challenges
               git commit -m "chore(config): update challenges"
+              git pull
               git push
             else
              echo "No challenges added to config file"
