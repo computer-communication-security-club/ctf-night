@@ -5,6 +5,7 @@ This repository lists most of the challenges used in the CTF Night, as well as m
 - [Vol.1](https://github.com/computer-communication-security-club/ctf-night/tree/vol1)
 - [Vol.2](https://github.com/computer-communication-security-club/ctf-night/tree/vol2)
 - [Vol.3](https://github.com/computer-communication-security-club/ctf-night/tree/vol3)
+- [Halloween Special](https://github.com/computer-communication-security-club/ctf-night/tree/halloween-special)
 
 ## Contributing
 
