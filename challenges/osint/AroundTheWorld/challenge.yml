@@ -1,0 +1,18 @@
+name: "AroundTheWorld"
+author: "dudu"
+category: OSINT
+description: |-
+  FIND ME IF YOU CAN 😈🎃
+  **Author**: Uzi
+tags:
+  - intermediate
+value: 1000
+type: dynamic
+extra:
+  initial: 1000
+  decay: 10
+  minimum: 500
+flags:
+  - ccsCTF{MAA_IM_IN_ANTARTICA}
+files:
+  - challenge/chall4.txt

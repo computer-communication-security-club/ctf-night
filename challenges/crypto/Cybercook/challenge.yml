@@ -1,0 +1,19 @@
+name: "Cybercook"
+author: "dudu"
+category: Cryptography
+description: |-
+  cooked with little bit of hex little bit of base and pinch of love
+  
+  **Author**: Uzi
+tags:
+  - beginner
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 10
+  minimum: 100
+flags:
+  - ccsCTF{c00k3d_with_3nc0d3}
+files:
+  - challenge/chall3.txt

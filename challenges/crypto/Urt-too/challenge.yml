@@ -1,0 +1,19 @@
+name: "Urt too"
+author: "dudu"
+category: Cryptography
+description: |-
+  Loongaa Numbaa
+  
+  **Author**: Uzi
+tags:
+  - beginner
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 10
+  minimum: 100
+flags:
+  - ccsCTF{4r3_y0u_enj0yin9_th3_chall5}
+files:
+  - challenge/chall1.txt

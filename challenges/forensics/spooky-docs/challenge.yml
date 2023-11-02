@@ -1,0 +1,19 @@
+name: "Spooky Docs"
+author: "khangal"
+category: Forensic
+description: |-
+  Spooky goofy challenge XAXA
+
+  **Author**: m0nrass
+tags:
+  - intermediate
+value: 1000
+type: dynamic
+extra:
+  initial: 1000
+  decay: 10
+  minimum: 500
+flags:
+  - ccsCTF{Ez_F0r3nnS1c5_huH?}
+files:
+  - challenge/forensics.zip

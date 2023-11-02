@@ -1,0 +1,76 @@
+name: CTFd Challenge Deploy
+
+on:
+  pull_request:
+    paths:
+      - 'challenges/**'
+  push:
+    paths:
+      - 'challenges/**'
+    branches: [main]
+
+jobs:
+  challenge-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Set up Python
+        uses: actions/setup-python@v4
+      - name: Install ctfcli
+        run: |
+          python -m pip install --upgrade pip
+          pip install ctfcli
+      - name: Set up ctfcli config
+        run: |
+          CONFIG="[config]\n\
+                  url = ${{ secrets.CTFD_URL }}\n\
+                  access_token = ${{ secrets.CTFD_TOKEN }}\n\
+                  \n"
+          echo -e "$CONFIG" > .ctf/config
+          cat .ctf/challenges >> .ctf/config
+      - name: Lint and deploy challenges
+        run: |
+          shopt -s globstar
+          CHANGED_CHALLENGES=$(git diff --name-only ${{ github.event.before }} ${{ github.sha }} | grep -E '^challenges/')
+          for i in $CHANGED_CHALLENGES; do
+            CHAL_DIR=$(dirname $i | awk -F'/' '{print $1 "/" $2 "/" $3}')
+            echo "LINTING CHALLENGE FILE: $CHAL_DIR"
+            ctf challenge lint "$CHAL_DIR"
+            echo "CHECKING IF CHALLENGE IS INSTALLED: $CHAL_DIR"
+            if ! cat .ctf/config | grep -q "$CHAL_DIR"; then
+              echo "INSTALLING CHALLENGE TO CTFd: $CHAL_DIR"
+              ctf challenge install "$CHAL_DIR"
+              ctf challenge add "$CHAL_DIR/challenge.yml"
+              continue
+            else
+              echo "CHALLENGE ALREADY INSTALLED: $CHAL_DIR"
+            fi
+            echo "SYNCING CHALLENGE TO CTFd: $CHAL_DIR"
+            ctf challenge sync "$CHAL_DIR"
+          done
+        shell: bash
+      - name: Push ctfcli config file
+        run: |
+          if cat .ctf/config | grep -q 'challenge.yml'; then
+            NEW_CHALLENGES=$(sed -n '/challenge.yml/p' .ctf/config)
+            while IFS= read -r LINE; do
+              if ! grep -q "$LINE" .ctf/challenges; then
+                echo -e "$LINE" >> .ctf/challenges
+                echo "ADDED NEW CHALLENGE TO .ctf/challenge: $LINE"
+              fi
+            done <<< "$NEW_CHALLENGES"
+            if [ ! -z "$(git diff .ctf/challenges)" ]; then
+              git config user.name github-actions
+              git config user.email github-actions@github.com
+              git checkout ${GITHUB_REF_NAME}
+              git add .ctf/challenges
+              git commit -m "chore(config): update challenges"
+              git pull
+              git push
+            else
+             echo "No challenges added to config file"
+            fi
+          fi

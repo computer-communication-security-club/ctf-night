@@ -1,0 +1,17 @@
+name: "Go Go"
+author: "TheEyeLid"
+category: Cryptography
+description: |-
+  2011 оны 10 сарын 18 -ны байдлаар монголд гар утасны хамгийн шилдэг дуу ямар дуу байсан юм бол? 
+  ccsCTF{Artist_Song_Name}
+  **Author**: TheEyeLid
+tags:
+  - intermediate
+value: 750
+type: dynamic
+extra:
+  initial: 750
+  decay: 10
+  minimum: 250
+flags:
+  - ccsCTF{LMFAO_Sexy_And_I_Know_It}

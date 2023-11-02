@@ -1,0 +1,21 @@
+[challenges]
+challenges/misc/optical-illusion/challenge.yml = challenges/misc/optical-illusion/challenge.yml
+challenges/osint/imgur-reaper/challenge.yml = challenges/osint/imgur-reaper/challenge.yml
+challenges/misc/hidden-web/challenge.yml = challenges/misc/hidden-web/challenge.yml
+challenges/crypto/Random/challenge.yml = challenges/crypto/Random/challenge.yml
+challenges/web/Insecure-deserialization/challenge.yml = challenges/web/Insecure-deserialization/challenge.yml
+challenges/osint/Go-Go/challenge.yml = challenges/osint/Go-Go/challenge.yml
+challenges/crypto/Cybercook/challenge.yml = challenges/crypto/Cybercook/challenge.yml
+challenges/misc/PowerOFEye/challenge.yml = challenges/misc/PowerOFEye/challenge.yml
+challenges/osint/STALKERR/challenge.yml = challenges/osint/STALKERR/challenge.yml
+challenges/web/jwt/challenge.yml = challenges/web/jwt/challenge.yml
+challenges/crypto/rsa/challenge.yml = challenges/crypto/rsa/challenge.yml
+challenges/crypto/weird-encryption/challenge.yml = challenges/crypto/weird-encryption/challenge.yml
+challenges/crypto/HelloAlice/challenge.yml = challenges/crypto/HelloAlice/challenge.yml
+challenges/crypto/Urt-too/challenge.yml = challenges/crypto/Urt-too/challenge.yml
+challenges/osint/AroundTheWorld/challenge.yml = challenges/osint/AroundTheWorld/challenge.yml
+challenges/forensics/stego/challenge.yml = challenges/forensics/stego/challenge.yml
+challenges/misc/PixelArt/challenge.yml = challenges/misc/PixelArt/challenge.yml
+challenges/forensics/spooky-docs/challenge.yml = challenges/forensics/spooky-docs/challenge.yml
+challenges/crypto/color/challenge.yml = challenges/crypto/color/challenge.yml
+challenges/programming/count/challenge.yml = challenges/programming/count/challenge.yml

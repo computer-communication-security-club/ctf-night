@@ -1,0 +1,21 @@
+name: "Insecure-deserialization"
+author: "BaD$AngeL"
+category: web
+description: |-
+  bypass authentication or otherwise abuse the logic behind an application
+  **Author**: BaD$AngeL
+value: 1000
+type: dynamic
+image: null
+extra:
+  initial: 1000
+  decay: 30
+  minimum: 250
+flags:
+  - ccsCTF{5ef629ef0595df56de96545138a6fe9c}
+files: 
+  - src/chall.zip
+connection_info: http://3.69.2.172:1337
+tags:
+    - web
+version: "0.1"

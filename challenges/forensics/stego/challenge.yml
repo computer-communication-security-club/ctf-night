@@ -1,0 +1,19 @@
+name: "Stego 101 "
+author: "TheEyeLid"
+category: Forensic
+description: |-
+  Avarage stego
+  
+  **Author**: TheEyeLid
+tags:
+  - beginner
+value: 500
+type: dynamic
+extra:
+  initial: 500
+  decay: 10
+  minimum: 100
+flags:
+  - ccsCTF{h4ppy_H4llow3en_a4c941fced433d63}
+files:
+  - challenge/ccs.png

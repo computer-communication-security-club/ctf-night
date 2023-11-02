@@ -1,0 +1,20 @@
+name: "Auth-bypass"
+author: "BaD$AngeL"
+category: Web
+description: |-
+  if u can register, bypass auth, get flag
+  **Author**: BaD$AngeL
+value: 1000
+type: dynamic
+extra:
+  initial: 1000
+  decay: 30
+  minimum: 250
+flags:
+  - ccsCTF{d266fb75bd1923842d332c4f6c2e4035}
+files:
+  - src/challenge.zip
+connection_info: http://3.69.2.172:5000/
+tags:
+    - intermediate
+version: "0.1"

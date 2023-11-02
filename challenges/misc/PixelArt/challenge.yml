@@ -1,0 +1,19 @@
+name: "PixelArt"
+author: "dudu"
+category: Misc
+description: |-
+  Remove all the numbers and The flag ends after first } ,not forensic chall . 
+  
+  **Author**: Uzi
+tags:
+  - advanced
+value: 2000
+type: dynamic
+extra:
+  initial: 2000
+  decay: 10
+  minimum: 1000
+flags:
+  - ccsCTF{ART!ST}
+files:
+  - challenge/wpixelart.png

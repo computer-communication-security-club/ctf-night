@@ -1,0 +1,19 @@
+name: "Weird Encryption"
+author: "TheEyeLid"
+category: Cryptography
+description: |-
+  VSC might help you
+  
+  **Author**: TheEyeLid
+tags:
+  - beginner
+value: 700
+type: dynamic
+extra:
+  initial: 700
+  decay: 10
+  minimum: 200
+flags:
+  - ccsCTF{kind@_w3irD_enc0d1nG}
+files:
+  - challenge/chall.txt

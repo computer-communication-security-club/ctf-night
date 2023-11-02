@@ -1,0 +1,1 @@
+ccsCTF{fake_flag}
